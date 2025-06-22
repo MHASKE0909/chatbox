@@ -1,7 +1,7 @@
 <?php
 header("Content-Type: application/json");
 
-$apiKey = "AIzaSyA5DSLgexrpa50LDnfIJrhu6uCKza-uotU";  // Replace with actual API key
+$apiKey = $apiKey = getenv('GOOGLE_API_KEY');  // Replace with actual API key
 $url = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=" . $apiKey;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
